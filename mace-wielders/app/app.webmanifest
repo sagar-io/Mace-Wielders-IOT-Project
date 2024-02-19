@@ -1,0 +1,6 @@
+{
+    "name": "Holy Cow, Animal Detector",
+    "short_name": "Holy Cow",
+    "description": "An application built with Next.js",
+    "start_url": "/"
+}
