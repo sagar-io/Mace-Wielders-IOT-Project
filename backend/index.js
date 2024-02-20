@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const webPush = require("web-push");
-require("dotenv").config();
+// require("dotenv").config();
 
 const PORT = 6200;
 
@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to the IOT Server !");
 });
 
+console.log(process.env.PUBLIC_KEY);
 webPush.setVapidDetails(
   "mailto:tech.sagarsh@gmail.com",
   process.env.PUBLIC_KEY,
