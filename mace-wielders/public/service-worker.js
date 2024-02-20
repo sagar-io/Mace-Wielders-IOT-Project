@@ -18,11 +18,14 @@ self.addEventListener("activate", async (event) => {
 async function saveSubscription(subscription) {
   // next syntax for api call
   try {
-    const response = await fetch("http://localhost:6200/save-service-worker", {
-      method: "post",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(subscription),
-    });
+    const response = await fetch(
+      "https://pwa-backend-9sqn.onrender.com/save-service-worker",
+      {
+        method: "post",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(subscription),
+      }
+    );
     const data = await response.json();
     console.log(data);
   } catch (error) {
