@@ -13,12 +13,12 @@ export const SelectBox = () => {
         <div>
             <Select
                 options={options}
-                className='w-96 mb-3 mt-10'
+                className='w-[75vw] -translate-x-10 md:translate-x-0 md:w-96 mb-3 mt-10 relative z-10'
                 isMulti
                 defaultValue={[options[0]]}
                 components={animatedComponents}
             />
-            <button className='bg-green-500 py-1 px-4 rounded-md hover:opacity-75'>Save</button>
+            <button className='relative z-0 bg-green-500 -translate-x-10 md:translate-x-0 py-1 px-4 rounded-md hover:opacity-75'>Save</button>
         </div>
     )
 }
